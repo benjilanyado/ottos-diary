@@ -57,9 +57,19 @@ article {
   img {
     margin-left: auto;
     margin-right: auto;
+
+    &.map {
+      border: 1px solid $grey;
+      width: 100%;
+
+      @media #{$mobile} {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   small {
     display: block;
+    line-height: 18px;
   }
 }

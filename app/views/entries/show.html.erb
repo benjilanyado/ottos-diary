@@ -4,10 +4,12 @@
   <article>
     <div class="date"><%= @page.entry.published_date %></div>
 
+    <%= image_tag('map-placeholder.png', class: 'map') %>
+
     <%= @page.entry.body_markdown %>
   </article>
 
   <%= render partial: 'pagination' %>
 
-  <%= render partial: 'reading_progress' unless @page.progress.nil? %>
+  <%#= render partial: 'reading_progress' unless @page.progress.nil? %>
 </section>
