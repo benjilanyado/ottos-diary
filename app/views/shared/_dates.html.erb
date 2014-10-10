@@ -1,0 +1,13 @@
+<ul class="dates">
+  <% @page.dates.each do |year| %>
+    <li class="date<%= !@page.entry.nil? && @page.entry.year == year.year ? ' active' : '' %>">
+      <span><%= year.year %></span>
+
+      <ul>
+        <% year.entries.each do |entries| %>
+          <li><%= link_to "#{entries.day} #{entries.month}", entry_path(entries), class: !@page.entry.nil? && @page.entry.day == entries.day ? ' active-entry' : '' %></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

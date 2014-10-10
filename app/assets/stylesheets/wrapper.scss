@@ -1,0 +1,8 @@
+.wrapper {
+  float: left;
+  width: 80%;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
+}

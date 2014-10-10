@@ -1,0 +1,13 @@
+%link-style {
+  color: $primary;
+  font-family: $font-sans-serif-regular;
+  text-decoration: underline;
+
+  &:hover {
+    color: darken($primary, 20%);
+  }
+}
+
+%border-box {
+  box-sizing: border-box;
+}

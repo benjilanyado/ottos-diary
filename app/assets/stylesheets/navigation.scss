@@ -1,0 +1,62 @@
+.navigation {
+  nav {
+    .toggle {
+      background: black;
+      cursor: pointer;
+      position: absolute;
+      height: 21px;
+      margin-left: 5px;
+      margin-top: 4px;
+      width: 23px;
+    }
+
+    @extend %border-box;
+    background: $nav-background;
+    height: 50px;
+    padding: 10px;
+
+    .logo-wrapper {
+      .logo {
+        color: black;
+        display: block;
+        font-family: $font-script;
+        font-size: 35px;
+        line-height: 35px;
+        margin: 0 auto;
+        position: relative;
+        width: 126px;
+        z-index: 9000;
+      }
+    }
+
+    .pagination {
+      @extend %border-box;
+      margin-top: 15px;
+      padding-left: 14px;
+      padding-right: 14px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 80%;
+
+      @media #{$mobile} {
+        display: none;
+      }
+
+      a {
+        font-size: 16px;
+        padding-top: 3px;
+
+        &.previous {
+          background-size: 16px;
+          padding-left: 24px;
+        }
+
+        &.next {
+          background-size: 16px;
+          padding-right: 24px;
+        }
+      }
+    }
+  }
+}

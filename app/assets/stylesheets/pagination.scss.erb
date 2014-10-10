@@ -1,0 +1,26 @@
+.pagination {
+  @extend %clear;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  a {
+    @extend %link-style;
+    font-size: 18px;
+    height: 20px;
+    line-height: 18px;
+
+    &.previous {
+      background: url(<%= asset_path('previous@2x.png') %>) no-repeat left;
+      background-size: 20px;
+      padding-left: 28px;
+      float: left;
+    }
+
+    &.next {
+      background: url(<%= asset_path('next@2x.png') %>) no-repeat right;
+      background-size: 20px;
+      padding-right: 28px;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<%= render partial: 'shared/navigation', locals: { pagination: true } %>
+
+<section class="content">
+  <article>
+    <div class="date"><%= @page.entry.published_date %></div>
+
+    <%= @page.entry.body_markdown %>
+  </article>
+
+  <%= render partial: 'pagination' %>
+
+  <%= render partial: 'reading_progress' unless @page.progress.nil? %>
+</section>

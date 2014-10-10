@@ -1,0 +1,17 @@
+<section class="sidebar">
+  <nav>
+    <ul>
+      <li class="main-link"><%= link_to 'Home', root_path %></li>
+      <li class="main-link"><%= link_to 'Who is Otto?', who_is_otto_path, class: (action_name == 'who_is_otto' ? 'active' : '') %></li>
+      <li class="main-link"><%= link_to 'What happened to Otto?', what_happened_to_otto_path, class: (action_name == 'what_happened_to_otto' ? 'active' : '') %></li>
+      <li class="main-link"><%= link_to 'Excerpts', excerpts_path, class: (action_name == 'excerpts' ? 'active' : '') %></li>
+
+      <%= render partial: 'shared/dates' %>
+    </ul>
+
+    <ul class="small-copy">
+      <li><%= link_to 'Credits', credits_path %></li>
+      <li><%= link_to 'Copyright', copyright_path %></li>
+    </ul>
+  </nav>
+</section>

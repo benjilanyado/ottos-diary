@@ -1,0 +1,131 @@
+.intro {
+  @extend %clear;
+  margin: 50px auto;
+  max-width: 870px;
+
+  .col-1, .col-2 {
+    float: left;
+
+    @media #{$mobile} {
+      float: none;
+    }
+  }
+
+  .col-1 {
+    width: 60%;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
+
+    h1 {
+      font-family: $font-script;
+      font-size: 90px;
+      line-height: 90px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .sub-title {
+      font-family: $font-script;
+      font-size: 60px;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      font-family: $font-full-caps;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .sub-title, .date {
+      @media #{$mobile} {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    p {
+      color: $dark-grey;
+      font-family: $font-sans-serif-regular;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+
+      @media #{$mobile} {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+
+    .channel {
+      @extend %border-box;
+      @extend %clear;
+      margin: 0 auto;
+      width: 350px;
+
+      @media #{$mobile} {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .button {
+        @include hover-fade(all);
+        border-radius: 40px;
+        display: block;
+        font-family: $font-sans-serif-regular;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        padding-bottom: 12px;
+        padding-top: 13px;
+        width: 46%;
+
+        @media #{$mobile} {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        &.start-reading {
+          border: 2px solid $primary;
+          background: $primary;
+          color: white;
+          float: left;
+
+          &:hover {
+            border: 2px solid darken($primary, 10%);
+            background: darken($primary, 10%);
+          }
+        }
+
+        &.about-otto {
+          border: 2px solid $primary;
+          color: $primary;
+          float: right;
+
+          &:hover {
+            border: 2px solid darken($primary, 15%);
+            color: darken($primary, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  .col-2 {
+    width: 40%;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+}

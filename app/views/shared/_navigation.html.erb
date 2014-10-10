@@ -1,0 +1,11 @@
+<header class="navigation">
+  <nav>
+    <div id="open-sb" class="menu-button menu-left"></div>
+
+    <div class="logo-wrapper">
+      <%= link_to 'Otto\'s Diary', root_path, class: 'logo' %>
+    </div>
+
+    <%= render partial: 'pagination' unless !defined? pagination %>
+  </nav>
+</header>

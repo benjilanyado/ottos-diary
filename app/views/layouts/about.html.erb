@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render partial: 'shared/header_info' %>
+</head>
+<body>
+  <%= render partial: 'shared/sidebar' %>
+
+  <div class="wrapper">
+    <%= render partial: 'shared/navigation' %>
+
+    <section class="content">
+      <article>
+        <h1><%= yield :title %></h1>
+
+        <%= yield :body %>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

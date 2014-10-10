@@ -1,0 +1,137 @@
+.sidebar {
+  color: #CCC;
+  float: left;
+  font-family: $font-sans-serif-regular;
+  height: 100%;
+  width: 20%;
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  .logo {
+    font-family: $font-script;
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  a {
+    color: #CCC;
+    text-decoration: underline;
+
+    &:hover {
+      @include hover-fade(all);
+      color: white;
+    }
+  }
+
+  nav {
+    background-color: black;
+    height: 100%;
+    padding-top: 60px;
+    position: fixed;
+    width: 20%;
+
+    ul {
+      li.main-link {
+        margin-bottom: 04px;
+        padding-left: 18px;
+        padding-right: 18px;
+
+        a.active {
+          @include hover-fade(all);
+          color: white;
+        }
+      }
+
+      ul.dates {
+        margin-top: 30px;
+
+        &:before {
+          background: url(<%= asset_path('diary@2x.png') %>) no-repeat 95% 55%;
+          background-size: 17px;
+          content: '';
+          display: block;
+          height: 20px;
+          margin-bottom: 8px;
+          margin-left: 18px;
+          width: 20px;
+        }
+
+        span {
+          cursor: pointer;
+          display: block;
+          font-family: $font-full-caps;
+          font-size: 30px;
+          letter-spacing: 0.05em;
+          line-height: 30px;
+          margin-bottom: 1px;
+          padding-bottom: 6px;
+          padding-top: 12px;
+          padding-left: 18px;
+        }
+
+        li.date {
+          background: darken(#333, 05%);
+
+          span {
+            background: url(<%= asset_path('arrow-down@2x.png') %>) no-repeat 95% 55%;
+            background-size: 17px;
+          }
+
+          ul {
+            li {
+              display: none;
+              margin-left: 24px;
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        li.date:hover, .date.active {
+          background: #333;
+          @include hover-fade;
+          color: white;
+        }
+
+        li.active {
+          display: block;
+
+          span {
+            background: url(<%= asset_path('arrow-up@2x.png') %>) no-repeat 95% 55%;
+            background-size: 17px;
+          }
+
+          ul {
+            margin-bottom: 1px;
+            margin-top: 6px;
+            padding-bottom: 05px;
+
+            li {
+              display: block;
+
+              a.active-entry {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .small-copy {
+      font-size: 12px;
+      margin-top: 60px;
+      margin-left: 18px;
+
+      a {
+        color: lighten(#333, 15%);
+
+        &:hover {
+          @include hover-fade;
+          color: white;
+        }
+      }
+    }
+  }
+}

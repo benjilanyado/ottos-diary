@@ -1,0 +1,13 @@
+<% content_for :title do %>Excerpts<% end %>
+
+<% content_for :body do %>
+  <blockquote>"This is a styled blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <strong>bold style</strong> ullamco laboris nisi ut aliquip ex ea commodo consequat."</blockquote>
+
+  <p>Lorem ipsum dolor sit amet, <%= link_to 'link style', nil %> consectetur adipiscing elit, sed do eiusmod tempor <strong>bold style</strong> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <%= image_tag('otto-photo.jpg', width: '60%') %>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <%= link_to 'link style', nil %> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <strong>bold style</strong> officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <%= link_to 'link style', nil %> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <strong>bold style</strong> officia deserunt mollit anim id est laborum.</p>
+<% end %>

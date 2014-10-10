@@ -1,0 +1,29 @@
+.menu-button {
+  display: none;
+  cursor: pointer;
+  height: 15px;
+  left: 7px;
+  margin: 7px;
+  position: absolute;
+  width: 19px;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
+  &:before {
+    content: "";
+    border-bottom: 09px double darken($grey, 40%);
+    border-top: 3px solid darken($grey, 40%);
+    height: 3px;
+    position: absolute;
+    width: 19px;
+  }
+
+  &:hover {
+    &:before {
+      border-bottom: 09px double darken($grey, 100%);
+      border-top: 3px solid darken($grey, 100%);
+    }
+  }
+}

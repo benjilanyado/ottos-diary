@@ -1,0 +1,5 @@
+<div class="pagination">
+  <%= link_to 'Previous entry', entry_path(@page.previous), class: 'previous' unless @page.previous.nil? %>
+
+  <%= link_to 'Next entry', entry_path(@page.next), class: 'next' unless @page.next.nil? %>
+</div>
