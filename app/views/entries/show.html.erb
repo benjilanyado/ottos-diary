@@ -4,6 +4,8 @@
   <article>
     <div class="date"><%= @page.entry.published_date %></div>
 
+    <%= image_tag(@page.entry.image_name, class: 'map') unless @page.entry.image_name.blank? %>
+
     <%= @page.entry.body_markdown %>
   </article>
 
