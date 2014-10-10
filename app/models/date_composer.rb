@@ -11,7 +11,7 @@ class DateComposer
     objects = []
 
     YEARS.each do |year|
-      objects.push(OpenStruct.new(year: year, entries: entries.where(year: year)))
+      objects.push(OpenStruct.new(year: year, entries: entries.where(year: year).order('created_at ASC')))
     end
 
     objects
