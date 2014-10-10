@@ -16,9 +16,14 @@
 //= require_tree .
 
 $(document).on('page:change', function () {
+  // Date toggle
   $(".dates span").on("click", function () {
     $('.dates li').removeClass('active');
     $($(this)).parent().toggleClass('active');
     $($(this)).parent().slideDown();
+  });
+
+  $(".menu-button").on("click", function () {
+    $('.sidebar').toggle();
   });
 });

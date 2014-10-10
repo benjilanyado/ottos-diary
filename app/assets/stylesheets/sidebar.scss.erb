@@ -7,6 +7,9 @@
 
   @media #{$mobile} {
     display: none;
+    float: none;
+    height: auto;
+    width: 100%;
   }
 
   .logo {
@@ -31,6 +34,11 @@
     padding-top: 60px;
     position: fixed;
     width: 20%;
+
+    @media #{$mobile} {
+      position: static;
+      width: 100%;
+    }
 
     ul {
       li.main-link {
@@ -121,8 +129,12 @@
 
     .small-copy {
       font-size: 12px;
-      margin-top: 60px;
+      margin-top: 50px;
       margin-left: 18px;
+
+      @media #{$mobile} {
+        margin-bottom: 20px;
+      }
 
       a {
         color: lighten(#333, 15%);

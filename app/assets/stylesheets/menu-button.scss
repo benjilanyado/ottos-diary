@@ -2,13 +2,14 @@
   display: none;
   cursor: pointer;
   height: 15px;
-  left: 7px;
+  left: 12px;
   margin: 7px;
   position: absolute;
   width: 19px;
 
   @media #{$mobile} {
     display: block;
+    top: 10px;
   }
 
   &:before {
@@ -22,8 +23,8 @@
 
   &:hover {
     &:before {
-      border-bottom: 09px double darken($grey, 100%);
-      border-top: 3px solid darken($grey, 100%);
+      border-bottom: 09px double darken($grey, 50%);
+      border-top: 3px solid darken($grey, 50%);
     }
   }
 }
