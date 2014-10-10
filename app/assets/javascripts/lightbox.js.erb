@@ -1,0 +1,106 @@
+$(document).ready(function (){
+
+
+
+$("#lightlink").click(function(event){
+
+		event.preventDefault();
+
+		$("#lightbox").fadeIn();
+		$("#lightboxwrapper").fadeIn();
+
+});
+
+
+$("#closebutton").click(function(event){
+
+	event.preventDefault();
+
+	$("#lightbox").fadeOut();
+	$("#lightboxwrapper").fadeOut();
+
+
+});
+
+$("#lightboxwrapper").click(function(event){
+
+	$("#lightbox").fadeOut();
+	$("#lightboxwrapper").fadeOut();
+
+});
+
+
+
+
+///lightbox
+
+
+var lightboximages = [
+{
+		src: "<%= asset_path('otto-after-the-war.jpg') %>",
+		title: "Image 3"
+}, {
+		src: "<%= asset_path('otto-after-the-war.jpg') %>",
+		title: "Image 2"
+}
+];
+
+var lightboxCurrent = 0;
+
+function lightboxRight() {
+
+	lightboxCurrent += 1
+
+	if (lightboxCurrent>=lightboximages.length)
+	{
+		lightboxCurrent = 0
+	}
+
+		$("#lightboxpic img").attr("src", lightboximages[lightboxCurrent].src);
+		$("#lightboxh2 h2").html(lightboximages[lightboxCurrent].title)
+		$("#lightboxp p").html(lightboximages[lightboxCurrent].caption)
+		$("#lightboxpic a, #lightboxcaption a").attr("href", lightboximages[lightboxCurrent].link)
+
+
+}
+
+$("#lightboxcontrolRight").click(function(event){
+	event.preventDefault();
+
+
+	lightboxRight();
+});
+
+
+function lightboxLeft() {
+
+	if (lightboxCurrent==0) {
+
+		lightboxCurrent = lightboximages.length
+	}
+
+	lightboxCurrent -=1;
+
+	$("#lightboxpic img").attr("src", lightboximages[lightboxCurrent].src);
+	$("#lightboxh2 h2").html(lightboximages[lightboxCurrent].title)
+	$("#lightboxp p").html(lightboximages[lightboxCurrent].caption)
+	$("#lightboxpic a, #lightboxcaption a").attr("href", lightboximages[lightboxCurrent].link)
+
+}
+
+
+$("#lightboxcontrolLeft").click(function(event){
+	event.preventDefault();
+
+
+	lightboxLeft();
+});
+
+
+
+
+
+
+
+
+}); //ready

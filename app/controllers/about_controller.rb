@@ -20,6 +20,6 @@ class AboutController < ApplicationController
   private
 
   def set_service
-    @page = ShowAboutPageService.apply
+    @page = ShowStaticPageService.apply
   end
 end
