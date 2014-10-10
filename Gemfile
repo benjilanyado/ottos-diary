@@ -27,6 +27,7 @@ gem 'spring',        group: :development
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'redcarpet'
+gem "paperclip", "~> 4.2"
 
 group :development do
   # Use sqlite3 as the database for Active Record
