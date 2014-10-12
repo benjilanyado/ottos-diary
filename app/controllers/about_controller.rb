@@ -2,7 +2,7 @@ class AboutController < ApplicationController
   layout 'layouts/about'
   before_filter :set_service
 
-  def who_is_otto
+  def before_the_war
   end
 
   def what_happened_to_otto

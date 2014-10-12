@@ -19,13 +19,14 @@
       .logo {
         color: black;
         display: block;
-        font-family: $font-script;
-        font-size: 35px;
+        font-family: $font-sans-serif-regular;
+        font-size: 20px;
         line-height: 35px;
         margin: 0 auto;
         position: relative;
         width: 126px;
         z-index: 9000;
+        font-weight: bold
       }
     }
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :entries, only: [:show]
   resource :gallery, only: [:show]
 
-  get 'who-is-otto' => 'about#who_is_otto'
+  get 'before_the_war' => 'about#before_the_war'
   get 'what-happened-to-otto' => 'about#what_happened_to_otto'
   get 'excerpts' => 'about#excerpts'
   get 'credits' => 'about#credits'

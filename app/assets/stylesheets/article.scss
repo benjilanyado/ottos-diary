@@ -1,7 +1,7 @@
 article {
   h1, .date {
-    font-family: $font-script;
-    font-size: 80px;
+    font-family: $font-sans-serif-regular;
+    font-size: 40px;
     line-height: 70px;
     text-align: center;
     margin-bottom: 15px;
@@ -66,6 +66,16 @@ article {
         margin-bottom: 15px;
       }
     }
+  }
+
+  .subtitle {
+
+    color: grey;
+    position: relative;
+    bottom: 23px;
+    text-align: center;
+    font-family: $font-sans-serif-regular;
+    font-size: 14px
   }
 
   small {
