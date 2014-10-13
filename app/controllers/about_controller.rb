@@ -17,6 +17,9 @@ class AboutController < ApplicationController
   def copyright
   end
 
+  def map    
+  end
+
   private
 
   def set_service
