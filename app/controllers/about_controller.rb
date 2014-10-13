@@ -5,7 +5,7 @@ class AboutController < ApplicationController
   def before_the_war
   end
 
-  def what_happened_to_otto
+  def after_the_war
   end
 
   def excerpts
