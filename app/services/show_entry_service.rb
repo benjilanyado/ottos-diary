@@ -1,7 +1,7 @@
 class ShowEntryService
   def self.apply(params)
     entry = Entry.find(params)
-    entries = Entry.all.order('year ASC')
+    entries = Entry.all
     paginator = PaginationComposer.new(entry)
 
     OpenStruct.new(
