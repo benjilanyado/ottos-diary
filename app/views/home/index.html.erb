@@ -1,5 +1,6 @@
 <% Entry.all.order('year ASC').order('month ASC').each do |date| %>
   <%= date.year %>
+  <%= date.month %>
 <% end %>
 
 <div class="intro">
