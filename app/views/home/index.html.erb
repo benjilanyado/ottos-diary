@@ -1,3 +1,7 @@
+<% Entry.all.order('year ASC').order('month ASC').each do |date| %>
+  <%= date.year %>
+<% end %>
+
 <div class="intro">
   <div class="col-1">
     <h1>Otto's Diary</h1>
