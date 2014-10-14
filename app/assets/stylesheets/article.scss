@@ -125,6 +125,69 @@ article {
 
 }
 
+.excerptheader {
+
+  font-family: $font-sans-serif-regular;
+  text-align: center;
+  color: black;
+  margin-top: 50px
+
+}
+
+.excerpt {
+
+  padding: 20px 0px  
+}
+
+.excerpt img:nth-child(1) {
+
+  margin-left: 0px;
+  margin-bottom: 10px;
+  display: inline;
+  margin-right: 15px;
+}
+
+.excerpt img:nth-child(1) {
+
+  margin-left: 0px;
+  margin-bottom: 10px;
+  display: inline;
+  margin-right: 15px;
+}
+
+.excerpt img:nth-child(2) {
+
+  margin-left: 15px;
+  margin-bottom: -33px;
+  display: inline;
+  margin-right: 0px;
+  margin-top: -21px;
+}
+
+.excerptdivider {
+
+  text-align: center;
+  font-size: 34px;
+  color: grey;
+  padding: 20px;
+}
+
+.fullentry {
+
+  padding-left: 20px;
+  font-size: 12px;
+  font-family: $font-sans-serif-regular;
+  text-align: center;
+  color: black;
+
+}
+
+.excerpt a {
+
+  text-decoration: underline;
+  color: #d50920
+}
+
 
 
 
