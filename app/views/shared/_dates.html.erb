@@ -9,7 +9,7 @@
             <li>
               <%= key %>
 
-              <ul>
+              <ul class="<%= !@page.entry.nil? && @page.entry.month == key ? ' active' : '' %>">
                 <% month.each do |entry| %>
                   <li><%= link_to "#{entry.day} #{entry.month}", entry_path(entry), class: !@page.entry.nil? && @page.entry.day == entry.day ? ' active-entry' : '' %></li>
                 <% end %>
