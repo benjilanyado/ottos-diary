@@ -6,10 +6,10 @@
       <ul>
         <% year.entries.each do |key, month| %>
           <% if month.count > 0 %>
-            <li>
+            <li class="<%= !@page.entry.nil? && @page.entry.month == key ? ' active' : '' %>">
               <%= key %>
 
-              <ul class="<%= !@page.entry.nil? && @page.entry.month == key ? ' active' : '' %>">
+              <ul>
                 <% month.each do |entry| %>
                   <li><%= link_to "#{entry.day} #{entry.month}", entry_path(entry), class: !@page.entry.nil? && @page.entry.day == entry.day ? ' active-entry' : '' %></li>
                 <% end %>

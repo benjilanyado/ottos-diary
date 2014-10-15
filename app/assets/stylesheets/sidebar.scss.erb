@@ -90,6 +90,8 @@
 
           ul {
             li {
+              background: url(<%= asset_path('month-expand-down@2x.png') %>) no-repeat 95% 0%;
+              background-size: 17px;
               cursor: pointer;
               display: none;
               margin-left: 24px;
@@ -98,7 +100,16 @@
               ul {
                 display: none;
 
-                &.active {
+                li {
+                  background: none;
+                }
+              }
+
+              &.active {
+                background: url(<%= asset_path('month-expand-up@2x.png') %>) no-repeat 95% 0%;
+                background-size: 17px;
+
+                ul {
                   display: block;
                 }
               }
