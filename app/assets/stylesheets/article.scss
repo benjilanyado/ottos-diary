@@ -7,8 +7,8 @@ article {
     margin-bottom: 15px;
 
     @media #{$mobile} {
-      font-size: 60px;
-      line-height: 60px;
+      font-size: 30px;
+      line-height: 30px;
       margin-bottom: 0px;
     }
   }
@@ -79,7 +79,7 @@ article {
   }
 
   .copyrightnotice  {
-  
+
    font-family: $font-sans-serif-regular;
    font-size: 12px;
    text-align: right;
@@ -101,8 +101,8 @@ article {
   }
 
 .seemap {
-  
-    position: relative;    
+
+    position: relative;
     bottom: 30px;
     right: 0px;
     text-align: right
@@ -117,7 +117,7 @@ article {
 }
 
 .copyrightnotice  {
-  
+
    font-family: $font-sans-serif-regular;
    font-size: 12px;
    text-align: right;
@@ -136,7 +136,7 @@ article {
 
 .excerpt {
 
-  padding: 20px 0px  
+  padding: 20px 0px
 }
 
 .excerpt img:nth-child(1) {
@@ -189,12 +189,6 @@ article {
 }
 
 #lightboxpic img {
-  
+
   max-height: 400px;
 }
-
-
-
-
-
-
