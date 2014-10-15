@@ -1,21 +1,5 @@
 <%= render partial: 'shared/navigation', locals: { pagination: true } %>
 
-<% months = ['January', 'February'] %>
-
-<% push_months = { 'January' => [], 'February' => [], 'March' => []} %>
-
-<% @entries = Entry.where(year: '1915').order('created_at ASC') %>
-
-<% @entries.each do |entry| %>
-  <% months.each do |month| %>
-    <% if entry.month == month %>
-      <% push_months[month].push(entry) %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<%= push_months %>
-
 <section class="content">
   <article>
     <div class="date"><%= @page.entry.published_date %></div>
@@ -27,8 +11,6 @@
   </article>
 
   <%= render partial: 'pagination' %>
-
-
 </section>
 
 <div class="copyrightnotice"><small>&copy; The estate of Otto Feldmann: Monica Lanyado, Tzafrah Shushan and Aya Shochat</small></div>

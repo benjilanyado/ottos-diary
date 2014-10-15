@@ -1,11 +1,21 @@
 <ul class="dates">
   <% @page.dates.each do |year| %>
-    <li class="date<%= !@page.entry.nil? && @page.entry.year == year.year ? ' active' : '' %>">
+  <li class="date<%= !@page.entry.nil? && @page.entry.year == year.year ? ' active' : '' %>">
       <span><%= year.year %></span>
 
       <ul>
-        <% year.entries.each do |entries| %>
-          <li><%= link_to "#{entries.day} #{entries.month}", entry_path(entries), class: !@page.entry.nil? && @page.entry.day == entries.day ? ' active-entry' : '' %></li>
+        <% year.entries.each do |key, month| %>
+          <% if month.count > 0 %>
+            <li>
+              <%= key %>
+
+              <% month.each do |entry| %>
+                <ul>
+                  <li><%= link_to "#{entry.day} #{entry.month}", entry_path(entry), class: !@page.entry.nil? && @page.entry.day == entry.day ? ' active-entry' : '' %></li>
+                </ul>
+              <% end %>
+            </li>
+          <% end %>
         <% end %>
       </ul>
     </li>
