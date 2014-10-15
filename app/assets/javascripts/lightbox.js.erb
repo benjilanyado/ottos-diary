@@ -1,47 +1,66 @@
 $(document).on('page:change', function () {
 
-
-
-$("#lightlink").click(function(event){
-
-		event.preventDefault();
-
-		$("#lightbox").fadeIn();
-		$("#lightboxwrapper").fadeIn();
-
-});
-
-
-$("#closebutton").click(function(event){
-
-	event.preventDefault();
-
-	$("#lightbox").fadeOut();
-	$("#lightboxwrapper").fadeOut();
-
-
-});
-
-$("#lightboxwrapper").click(function(event){
-
-	$("#lightbox").fadeOut();
-	$("#lightboxwrapper").fadeOut();
-
-});
-
-
-
-
 ///lightbox
 
 
 var lightboximages = [
 {
-		src: "<%= asset_path('otto-after-the-war.jpg') %>",
-		title: "Image 3"
+		src: "<%= asset_path('1.jpg') %>",
+		title: "Otto Feldmann before the War, studying chemistry at Bielitz university, 1902"
 }, {
-		src: "<%= asset_path('otto-after-the-war.jpg') %>",
-		title: "Image 2"
+		src: "<%= asset_path('2.jpg') %>",
+		title: "Otto's sailing card, embarking for New York in 1903, en route to Cuba"
+}, {
+		src: "<%= asset_path('3.jpg') %>",
+		title: "A letter from Otto to Else from Cuba, 1906"
+}, {
+		src: "<%= asset_path('4.jpg') %>",
+		title: "Otto & Else's wedding invitation, 1909"
+}, {
+		src: "<%= asset_path('5.jpg') %>",
+		title: "Otto and Else, with their daughters Edith and Liese"
+}, {
+		src: "<%= asset_path('6.jpg') %>",
+		title: "Otto in the army, 1914"
+}, {
+		src: "<%= asset_path('7.jpg') %>",
+		title: "Otto's captivity is formally announced by letter from Vienna"
+}, {
+		src: "<%= asset_path('8.jpg') %>",
+		title: "A postcard delivered from Otto by the Red Cross, 1917"
+}, {
+		src: "<%= asset_path('9.jpg') %>",
+		title: "A postcard sent from Else to Otto in the POW camp, including his son Kurt, for the first time"
+}, {
+		src: "<%= asset_path('10.jpg') %>",
+		title: "Otto after the War, in Brno"
+}, {
+		src: "<%= asset_path('11.jpg') %>",
+		title: "Otto & Else send their son Kurt to England, just before the outbreak of WW2"
+}, {
+		src: "<%= asset_path('12.jpg') %>",
+		title: "A letter from Gestetner in London, confirming Otto's relocation to Tel Aviv"
+}, {
+		src: "<%= asset_path('13.jpg') %>",
+		title: "Otto's Palestine immigration certificate, 1939"
+}, {
+		src: "<%= asset_path('14.jpg') %>",
+		title: "The last photograph of Herber & Liese Langer (nee Felmann) and their daughter Bella-Judith, before they were captured and killed by the Nazis in 1939"
+}, {
+		src: "<%= asset_path('15.jpg') %>",
+		title: "The last letter sent by Liese to her parents, delivered by the Red Cross"
+}, {
+		src: "<%= asset_path('16.jpg') %>",
+		title: "Otto and Else in Israel"
+}, {
+		src: "<%= asset_path('17.jpg') %>",
+		title: "Otto, Else and Edith, with Edith's husband Radius and their daughter Aya"
+}, {
+		src: "<%= asset_path('18.jpg') %>",
+		title: "Edith & Kurt in Israel, 1987"
+}, {
+		src: "<%= asset_path('19.jpg') %>",
+		title: "Otto & Edith's descendants, Israel, 2007"
 }
 ];
 

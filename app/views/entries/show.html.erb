@@ -5,7 +5,7 @@
     <div class="date"><%= @page.entry.published_date %></div>
 
     <%= image_tag(@page.entry.image_name, class: 'map') unless @page.entry.image_name.blank? %>
-    <div class="seemap"><a href="/map">full map</a></div>
+    <div class="seemap"><a target="_blank" href="https://www.google.com/maps/d/edit?mid=zJxL2RhuJQBc.kAzdI1yI3YAA">full map</a></div>
 
     <%= @page.entry.body_markdown %>
 
