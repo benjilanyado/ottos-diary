@@ -1,3 +1,9 @@
 body, html {
   height: 100%;
 }
+
+.hide-on-mobile {
+  @media #{$mobile} {
+    display: none;
+  }
+}
