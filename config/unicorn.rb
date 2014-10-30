@@ -23,9 +23,7 @@ after_fork do |server, worker|
   end
 
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection(
-      Rails.application.config.database_configuration[Rails.env]
-    )
+    ActiveRecord::Base.establish_connection
     
   if defined?(Resque)
     Resque.redis = ENV['REDISTOGO_URL'] || "redis://127.0.0.1:6379"
